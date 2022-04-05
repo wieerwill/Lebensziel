@@ -5,8 +5,8 @@ In dieser kleinen Arbeit, will ich näher darauf eingehen, wie man sein Lebenszi
 Mit dieser Vorarbeit soll es möglich sein, Motivierter zu leben und seine Lebensfreude wiederzufinden.
 
 Roadmap:
-- [ ] Motivation <-- WORK IN PROGRESS
-- [ ] Wer bin ich
+- [X] Motivation 
+- [ ] Wer bin ich <-- WORK IN PROGRESS
 - [ ] Wer will ich sein
 - [ ] Was ich wirklich will
 - [ ] Selbstfindung
