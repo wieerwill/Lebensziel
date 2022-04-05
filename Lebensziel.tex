@@ -1,0 +1,52 @@
+\documentclass[a4paper, 12pt, twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amsthm,amsfonts,amssymb} 
+\usepackage{color,graphicx,overpic}
+\usepackage{fancyhdr} 
+\usepackage{booktabs}
+\usepackage[pdfencoding=auto]{hyperref} 
+\usepackage{cite}
+\usepackage[section]{placeins}
+\usepackage{subfiles}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+
+\pdfinfo{
+    /Title (Lebensziel)
+    /Creator (TeX)
+    /Producer (pdfTeX 3.14)
+    /Author (Robert Jeutter)
+    /Subject (Lebensziele finden und festlegen)
+}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vspace{1cm}
+    {\scshape\Large Motivation, Antrieb und Planung\par}
+    \vspace{1.5cm}
+    {\huge\bfseries Lebensziel\par}
+    \vspace{2cm}
+    {\Large\itshape Robert Jeutter\par}
+    \vfill
+    {\large \today\par}
+\end{titlepage}
+
+\tableofcontents {\protect\thispagestyle{empty}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[EL]{\leftmark}
+\fancyhead[OR]{\rightmark}
+\fancyfoot[EL]{\thepage}
+\fancyfoot[OR]{\thepage}
+
+\subfile{chapters/1-motivation}
+
+\bibliography{references}
+\bibliographystyle{acm}
+
+\end{document}
