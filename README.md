@@ -6,7 +6,7 @@ Mit dieser Vorarbeit soll es möglich sein, Motivierter zu leben und seine Leben
 
 Roadmap:
 - [X] Motivation 
-- [ ] Wer bin ich <-- WORK IN PROGRESS
+- [X] Wer bin ich
 - [ ] Wer will ich sein
 - [ ] Was ich wirklich will
 - [ ] Selbstfindung
