@@ -11,7 +11,7 @@ Roadmap:
 - [ ] Was ich wirklich will
 - [ ] Selbstfindung
 - [ ] Lebensziele definieren
-- [ ] Vision Board erstellen
+- [ ] Vision Board erstellen <-- Work in Progress
 - [ ] Lebensfreude finden
 - [ ] Gewohnheiten trainieren
 
