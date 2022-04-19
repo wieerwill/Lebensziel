@@ -8,10 +8,10 @@ Roadmap:
 - [X] Motivation 
 - [X] Wer bin ich
 - [ ] Wer will ich sein
-- [ ] Was ich wirklich will
+- [ ] Was ich wirklich will <-- Work in Progress
 - [ ] Selbstfindung
 - [ ] Lebensziele definieren
-- [ ] Vision Board erstellen <-- Work in Progress
+- [X] Vision Board erstellen 
 - [ ] Lebensfreude finden
 - [ ] Gewohnheiten trainieren
 
