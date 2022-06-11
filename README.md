@@ -15,4 +15,7 @@ Roadmap:
 - [ ] Lebensfreude finden
 - [ ] Gewohnheiten trainieren
 
-den aktuellen Stand des Buches kannst du immer ![als PDF](Lebensziel.pdf) herunterladen.
+den aktuellen Stand des Buches kannst du immer [als PDF](Lebensziel.pdf) herunterladen.
+
+
+Minimales [Tagebuch](routine_diary/routine-diary.pdf) zum Tracken deiner Ziele und Wohlbefinden. Emojis darin stammen von [https://github.com/alecjacobson/coloremoji.sty](https://github.com/alecjacobson/coloremoji.sty).

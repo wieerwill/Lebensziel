@@ -1,0 +1,138 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pgffor}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[left=1cm,right=2cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{positioning,calendar}
+\thispagestyle{empty}
+
+\colorlet{darkgreen}{green!50!black}
+\colorlet{holiday}{black!50}
+
+\newcommand{\calrow}[1]{
+    \node[anchor=east, draw=none] (start) {\phantom{24}};
+    \node[anchor=west] at (start.west) (Mon){Mo};
+    \node[right=1.8em of Mon.west, anchor=west](Tue){Di}; 
+    \node[right=1.8em of Tue.west, anchor=west](Wed){Mi};
+    \node[right=1.8em of Wed.west, anchor=west](Thu){Do}; 
+    \node[right=1.8em of Thu.west, anchor=west](Fri){Fr};
+    \node[right=1.8em of Fri.west, anchor=west](Sat){Sa}; 
+    \node[right=1.8em of Sat.west, anchor=west](Sun){So};
+    \node[darkgreen, above=of Thu]{\textbf{#1}};
+}
+
+\newcommand{\calperiod}[2][\currentyear]{%
+  \calendar[dates=\currentyear-#2-01 to \currentyear-#2-last, day xshift=1.8em]
+    if (Sunday) [holiday] \holidays;}
+\edef\currentyear{\the\year}
+
+\newcommand{\holidays}{% holidays in Germany
+    if (equals=01-01) [holiday]%
+    if (equals=01-06) [holiday]%
+    if (equals=03-08) [holiday]%
+    if (equals=05-01) [holiday]%
+    if (equals=08-08) [holiday]%
+    if (equals=08-15) [holiday]%
+    if (equals=09-20) [holiday]%
+    if (equals=10-03) [holiday]%
+    if (equals=10-31) [holiday]%
+    if (equals=11-01) [holiday]%
+    if (equals=12-25) [holiday]%
+    if (equals=12-26) [holiday]%
+}
+
+\setlength{\arrayrulewidth}{.1pt}
+\setlength{\tabcolsep}{2.5pt}
+\begin{document}
+
+\huge{Juni}
+\vspace*{.5cm}
+
+\footnotesize
+\begin{tabular*}{\textwidth}{r |ccccccc|ccccccc|ccccccc|ccccccc|ccc}
+    & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30 & 31 \\\hline
+    Nichts Süßes &$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$\\
+    Viel Getrunken &$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$\\
+    Fasten &$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$\\
+    Aktiv $\geq$ 30 Min & $\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$\\\hline
+    \\
+    \multicolumn{32}{c}{ \color{red}{Weather} \color{black}{,} \color{Cyan}{Mood} \color{black}{\&} \color{Green}{Sleep}} \\\hline
+    %&1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30 & 31 \\\hline
+    \includegraphics[width=10px]{emoji_images/2600.pdf} \quad
+    \includegraphics[width=10px]{emoji_images/1F603.pdf} \quad
+    $\geq$10
+    & $\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$ \\
+
+    \includegraphics[width=10px]{emoji_images/26C5.pdf} \quad
+    \includegraphics[width=10px]{emoji_images/1F60A.pdf} \quad
+    \hspace{.3cm} 8
+    & $\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$ \\
+
+    \includegraphics[width=10px]{emoji_images/2601.pdf} \quad
+    \includegraphics[width=10px]{emoji_images/1F610.pdf} \quad
+    \hspace{.3cm} 6
+    & $\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$ \\
+
+    \includegraphics[width=10px]{emoji_images/2614.pdf} \quad
+    \includegraphics[width=10px]{emoji_images/1F615.pdf} \quad
+    \hspace{.3cm} 4
+    & $\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$ \\
+
+    \includegraphics[width=10px]{emoji_images/26A1.pdf} \quad
+    \includegraphics[width=10px]{emoji_images/1F62D.pdf} \quad
+    \hspace{.05cm} $\leq$2
+    & $\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$&$\circ$ \\
+    \hline
+\end{tabular*}
+
+\vspace*{1cm}
+
+\begin{tikzpicture}[
+        every calendar/.style={week list},
+        current year/.store in=\currentyear,
+        current year=2022,
+        current month/.store in=\currentmonth,
+        current month=06]
+    \matrix[%
+        row 1/.style={darkgreen,node distance=.2ex},
+        column sep=1ex
+    ]{
+        \calrow{Bett vor 23:00} & \calrow{Sport/Fitness} & \calrow{Sprache gelernt} & \calrow{Selfcare/Freizeit} \\
+        \calperiod{\currentmonth} & \calperiod{\currentmonth} & \calperiod{\currentmonth} & \calperiod{\currentmonth} \\[1ex]
+    };
+\end{tikzpicture}
+
+\vspace*{1cm}
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular*}{\linewidth}{p{.5cm} | p{4cm} | p{4cm} | p{4cm} | p{4cm}}
+    & 1. Woche & 2. Woche & 3. Woche & 4. Woche\\
+    \hline
+    \multirow{3}{*}{\rotatebox[origin=c]{90}{Ziele}} & 1. & 1. & 1. & 1. \\
+    & 2. & 2. & 2. & 2. \\
+    & 3. & 3. & 3. & 3. \\
+    \hline
+    \multirow{3}{*}{\rotatebox[origin=c]{90}{Erfolge}} & 1. & 1. & 1. & 1. \\
+    & 2. & 2. & 2. & 2. \\
+    & 3. & 3. & 3. & 3. \\
+    \hline
+    \multirow{3}{*}{\rotatebox[origin=c]{90}{Erkennt}\rotatebox[origin=c]{90}{niss}} & 1. & 1. & 1. & 1. \\
+    & 2. & 2. & 2. & 2. \\
+    & 3. & 3. & 3. & 3. \\
+    \hline
+    \multirow{3}{*}{\rotatebox[origin=c]{90}{Dank}\rotatebox[origin=c]{90}{barkeit}} & 1. & 1. & 1. & 1. \\
+    & 2. & 2. & 2. & 2. \\
+    & 3. & 3. & 3. & 3. \\
+    \hline
+    \multirow{3}{*}{\rotatebox[origin=c]{90}{Ideen}} & 1. & 1. & 1. & 1. \\
+    & 2. & 2. & 2. & 2. \\
+    & 3. & 3. & 3. & 3. \\
+\end{tabular*}
+
+\end{document}
